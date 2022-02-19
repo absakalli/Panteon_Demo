@@ -5,7 +5,7 @@ public class HomeManager : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject pointer;
-    [SerializeField] private GameObject moveManager;
+    [SerializeField] private GameObject map;
 
     Sequence anim;
 
@@ -21,6 +21,6 @@ public class HomeManager : MonoBehaviour
     {
         anim.Kill();
         canvas.SetActive(false);
-        moveManager.SetActive(true);
+        map.GetComponent<MovePlatform>().enabled = true;
     }
 }

@@ -1,18 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class RotatePlatform : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    int random;
+
+    private void Start()
     {
-        
+        random = Random.Range(1, 3);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        RotatePlat();
+    }
+
+    private void RotatePlat()
+    {
+        GameObject rotateChild = transform.GetChild(0).gameObject;
+
+        if (random == 1)
+        {
+            rotateChild.transform.RotateAround(transform.position, Vector3.forward, 1);
+        }
+
+        if (random == 2)
+        {
+            rotateChild.transform.RotateAround(transform.position, Vector3.forward, -1);
+        }
     }
 }
+

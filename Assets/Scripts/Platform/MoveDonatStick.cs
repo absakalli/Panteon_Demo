@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using DG.Tweening;
 using UnityEngine;
 
 public class MoveDonatStick : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Sequence anim;
+
     void Start()
     {
-        
+        MoveDonatLeft();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void MoveDonatLeft()
     {
-        
+        float random = Random.Range(0.6f, 1.1f);
+        anim = DOTween.Sequence();
+        anim.Append(transform.DOLocalMoveX(-0.125f, random).SetEase(Ease.InQuart))
+            .Append(transform.DOLocalMoveX(0.15f, random))
+            .SetLoops(-1);
     }
 }
