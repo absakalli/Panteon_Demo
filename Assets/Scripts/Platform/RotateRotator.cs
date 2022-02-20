@@ -2,31 +2,35 @@
 
 public class RotateRotator : MonoBehaviour
 {
-    int random;
-    int random1;
+    int velocity;
+    int direction;
+
+    private HingeJoint hinge;
+    private JointMotor hingemotor;
 
     private void Start()
     {
-        random = Random.Range(1, 3);
-        random1 = Random.Range(1, 3);
+        direction = Random.Range(0, 2);
+        velocity = Random.Range(100, 151);
+
+        hinge = GetComponent<HingeJoint>();
+        hingemotor = hinge.motor;
+
+        SetVelocity();
     }
 
-    private void FixedUpdate()
-    {
-        RotateRotater();
-    }
+    private void SetVelocity()
+    {        
+        if (direction == 0)
+        {
+            hingemotor.targetVelocity = velocity;
+            hinge.motor = hingemotor;
+        }
 
-    private void RotateRotater()
-    {
-        if (random == 1)
+        if (direction == 1)
         {
-            transform.RotateAround(transform.position, Vector3.up, random1);
-        }
-        
-        if (random == 2)
-        {
-            transform.RotateAround(transform.position, Vector3.up, -random1);
-        }
-        
+            hingemotor.targetVelocity = -velocity;
+            hinge.motor = hingemotor;
+        }        
     }
 }

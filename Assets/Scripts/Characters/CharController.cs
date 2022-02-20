@@ -47,14 +47,12 @@ public class CharController : MonoBehaviour
             {
                 anim.SetInteger("turn", 0);
             }
-
-            rb.velocity = new Vector3(movePos.x, 0, 0) * moveSpeed;
+            rb.AddForce(new Vector3(movePos.x, 0, 0) * moveSpeed, ForceMode.Impulse);
         }
 
         else
         {
             anim.SetInteger("turn", 0);
-            rb.velocity = Vector3.zero;
             firstPos = Vector3.zero;
             lastPos = Vector3.zero;
             movePos = Vector3.zero;

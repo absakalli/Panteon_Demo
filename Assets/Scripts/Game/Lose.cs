@@ -26,4 +26,20 @@ public class Lose : MonoBehaviour
             collision.transform.position = platform.instStart.transform.position + new Vector3(randomx, 0, randomz);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            DOTween.KillAll();
+            SceneManager.LoadScene(0);
+        }
+
+        if (other.gameObject.tag == "Opponent")
+        {
+            int randomx = Random.Range(-4, 5);
+            int randomz = Random.Range(-2, 2);
+            other.transform.position = platform.instStart.transform.position + new Vector3(randomx, 0, randomz);
+        }
+    }
 }

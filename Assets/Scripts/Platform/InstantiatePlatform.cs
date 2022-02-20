@@ -9,9 +9,9 @@ public class InstantiatePlatform : MonoBehaviour
     [SerializeField] private GameObject opponent;
     [SerializeField] private GameObject character;
 
-    public GameObject instStart;
     public GameObject instChar;
     public GameObject instOppon;
+    public GameObject instStart;
 
     void Start()
     {
@@ -31,42 +31,48 @@ public class InstantiatePlatform : MonoBehaviour
             clone = Instantiate(opponent
                 , new Vector3(-4 + i, 0, -2)
                 , Quaternion.identity);
-        }
+        }//Opponent
 
         for (int i = 0; i < 10; i = i + 2)
         {
             clone = Instantiate(opponent
                 , new Vector3(-4 + i, 0, -4)
                 , Quaternion.identity);
-        }
+        }//Opponent
 
         for (int i = 1; i <= 20; i++)
         {
-            int random = Random.Range(0, 2);
+            int random = Random.Range(0, 4);
 
-            if (random == 0)
+            if (random >= 0 && random <= 2)
             {
-                clone = Instantiate(platforms[random]
-                    , new Vector3(platforms[random].transform.position.x, platforms[random].transform.position.y, 10.8f * i)
+                clone = Instantiate(platforms[0]
+                    , new Vector3(platforms[0].transform.position.x, platforms[0].transform.position.y, 10.8f * i)
                     , Quaternion.identity
                     , map.GetComponent<Transform>());
 
-                int random1 = Random.Range(0, 5);
+                int random1 = Random.Range(0, 4);
 
-                clone = Instantiate(blocks[random1]
-                   , new Vector3(blocks[random1].transform.position.x, blocks[random1].transform.position.y, 10.8f * i)
-                   , Quaternion.identity
-                   , map.GetComponent<Transform>());
-            }
+                if (random1 >= 0 && random1 <= 2)
+                {
+                    int random2 = Random.Range(0, 5);
 
-            else if (random == 1)
+                    clone = Instantiate(blocks[random2]
+                       , new Vector3(blocks[random2].transform.position.x, blocks[random2].transform.position.y, 10.8f * i)
+                       , Quaternion.identity
+                       , map.GetComponent<Transform>());
+                }//Obstacles
+            }//Platform
+
+            if (random == 3)
             {
-                int random2 = Random.Range(1, 4);
-                clone = Instantiate(platforms[random2]
-                , new Vector3(platforms[random2].transform.position.x, platforms[random2].transform.position.y, 10.8f * i)
+                int random3 = Random.Range(1, 4);
+
+                clone = Instantiate(platforms[random3]
+                , new Vector3(platforms[random3].transform.position.x, platforms[random3].transform.position.y, 10.8f * i)
                 , Quaternion.identity
                 , map.GetComponent<Transform>());
-            }
-        }
+            }//Rotating Platform
+        }//Map
     }
 }
