@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class HomeManager : MonoBehaviour
 {
-    [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject holdandmove;
+    [SerializeField] private GameObject start;
     [SerializeField] private GameObject pointer;
     [SerializeField] private GameObject map;
 
@@ -20,7 +21,8 @@ public class HomeManager : MonoBehaviour
     public void Cliked()
     {
         anim.Kill();
-        canvas.SetActive(false);
+        holdandmove.SetActive(false);
+        start.SetActive(false);
         map.GetComponent<MovePlatform>().enabled = true;
     }
 }

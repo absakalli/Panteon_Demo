@@ -1,18 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private GameObject percentText;
+    private GameObject map;
+    private GameObject boy;
+
+    private void Start()
     {
-        
+        boy = GameObject.FindGameObjectWithTag("Player");
+        map = GameObject.FindGameObjectWithTag("Map");
+        percentText = GameObject.FindGameObjectWithTag("Text");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player")
+        {
+            percentText.GetComponent<CanvasGroup>().alpha = 1;
+            map.GetComponent<StopPlatform>().enabled = true;
+            map.GetComponent<MovePlatform>().enabled = false;
+            boy.GetComponent<CharAnimatorController>().enabled = true;
+            boy.GetComponent<CharController>().enabled = false;
+            gameObject.SetActive(false);
+        }
     }
 }

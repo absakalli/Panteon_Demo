@@ -8,6 +8,9 @@ TagManager:
   - Obstacle
   - Platform
   - ForceStick
+  - Map
+  - Wall
+  - Text
   layers:
   - Default
   - TransparentFX

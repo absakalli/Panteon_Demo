@@ -29,17 +29,17 @@ public class Lose : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
             DOTween.KillAll();
             SceneManager.LoadScene(0);
         }
 
-        if (other.gameObject.tag == "Opponent")
+        if (other.tag == "Opponent")
         {
             int randomx = Random.Range(-4, 5);
             int randomz = Random.Range(-2, 2);
-            other.transform.position = platform.instStart.transform.position + new Vector3(randomx, 0, randomz);
+            other.transform.root.transform.position = platform.instStart.transform.position + new Vector3(randomx, 0, randomz);
         }
     }
 }
