@@ -1,12 +1,14 @@
 ﻿using DG.Tweening;
 using UnityEngine;
+using Pathfinding;
 
 public class HomeManager : MonoBehaviour
 {
-    [SerializeField] private GameObject holdandmove;
+    [SerializeField] private GameObject boy;
+    [SerializeField] private GameObject girl;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject pointer;
-    [SerializeField] private GameObject map;
+    [SerializeField] private GameObject holdandmove;
 
     Sequence anim;
 
@@ -23,6 +25,8 @@ public class HomeManager : MonoBehaviour
         anim.Kill();
         holdandmove.SetActive(false);
         start.SetActive(false);
-        map.GetComponent<MovePlatform>().enabled = true;
+        boy.GetComponent<CharController>().enabled = true;
+        girl.GetComponent<AIPath>().enabled = true;
+        girl.transform.GetChild(0).GetComponent<Animator>().SetInteger("run", 1);
     }
 }

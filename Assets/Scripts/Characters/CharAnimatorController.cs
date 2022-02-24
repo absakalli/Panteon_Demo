@@ -22,6 +22,7 @@ public class CharAnimatorController : MonoBehaviour
         else
         {
             anim.speed = 1;
+            anim.SetInteger("turn", 0);
             anim.SetInteger("run", 0);
         }        
     }

@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 5313130990229425320}
   - component: {fileID: 5313130990229425321}
   - component: {fileID: 8039405857699165774}
+  - component: {fileID: 6698870346201713950}
   m_Layer: 0
   m_Name: Stick
   m_TagString: ForceStick
@@ -173,7 +174,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.004, z: 0.004}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0, y: -0.0139999995, z: 0}
+  m_ConnectedAnchor: {x: 0, y: -0.014, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -209,6 +210,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd383de2788959b4eade1151b4c9ba06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6698870346201713950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5313130990229425322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bee0a6fa1f5d4f4db481219040523c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  graphMask:
+    value: -1
+  type: 0
+  mesh: {fileID: -2457439952264339840, guid: 6175f814677bea74ab4599013ebb409e, type: 3}
+  rectangleSize: {x: 0.6, y: 5}
+  circleRadius: 1
+  circleResolution: 6
+  height: 10
+  meshScale: 50
+  center: {x: 0, y: 0, z: 4}
+  updateDistance: 0.4
+  isDual: 0
+  cutsAddedGeom: 1
+  updateRotationDistance: 10
+  useRotationAndScale: 0
 --- !u!1 &5615314758884267215
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +252,7 @@ GameObject:
   - component: {fileID: 5615314758884267214}
   - component: {fileID: 5615314758884267209}
   - component: {fileID: 2694452956320607696}
+  - component: {fileID: 6545988604699489665}
   m_Layer: 0
   m_Name: Rotator
   m_TagString: ForceStick
@@ -333,3 +363,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4dfdb012c7208428e2b095915818ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {fileID: 0}
+--- !u!114 &6545988604699489665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5615314758884267215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bee0a6fa1f5d4f4db481219040523c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  graphMask:
+    value: -1
+  type: 1
+  mesh: {fileID: 7554973115994324875, guid: 264b2315a1bd3f24591427b2b38ff530, type: 3}
+  rectangleSize: {x: 1, y: 1}
+  circleRadius: 1.19
+  circleResolution: 16
+  height: 3
+  meshScale: 50
+  center: {x: 0, y: -1, z: 0}
+  updateDistance: 0.4
+  isDual: 0
+  cutsAddedGeom: 1
+  updateRotationDistance: 10
+  useRotationAndScale: 0

@@ -11,6 +11,8 @@ TagManager:
   - Map
   - Wall
   - Text
+  - Paint
+  - Target
   layers:
   - Default
   - TransparentFX
