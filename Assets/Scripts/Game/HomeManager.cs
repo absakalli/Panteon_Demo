@@ -5,7 +5,7 @@ using Pathfinding;
 public class HomeManager : MonoBehaviour
 {
     [SerializeField] private GameObject boy;
-    [SerializeField] private GameObject girl;
+    [SerializeField] private GameObject[] girls;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject pointer;
     [SerializeField] private GameObject holdandmove;
@@ -26,7 +26,12 @@ public class HomeManager : MonoBehaviour
         holdandmove.SetActive(false);
         start.SetActive(false);
         boy.GetComponent<CharController>().enabled = true;
-        girl.GetComponent<AIPath>().enabled = true;
-        girl.transform.GetChild(0).GetComponent<Animator>().SetInteger("run", 1);
+        boy.transform.GetChild(0).GetComponent<Animator>().SetInteger("run", 1);
+
+        foreach (GameObject girl in girls)
+        {
+            girl.GetComponent<AIPath>().enabled = true;
+            girl.transform.GetChild(0).GetComponent<Animator>().SetInteger("run", 1);
+        }
     }
 }

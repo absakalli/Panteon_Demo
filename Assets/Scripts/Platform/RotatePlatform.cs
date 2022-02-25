@@ -2,11 +2,11 @@
 
 public class RotatePlatform : MonoBehaviour
 {
-    int random;
+    int directionRotate;
 
     private void Start()
     {
-        random = Random.Range(1, 3);
+        directionRotate = Random.Range(1, 3);
     }
 
     private void FixedUpdate()
@@ -18,29 +18,42 @@ public class RotatePlatform : MonoBehaviour
     {
         GameObject rotateChild = transform.GetChild(0).gameObject;
 
-        if (random == 1)
+        if (directionRotate == 1)
         {
             rotateChild.transform.RotateAround(transform.position, Vector3.forward, 1);
         }
 
-        if (random == 2)
+        if (directionRotate == 2)
         {
             rotateChild.transform.RotateAround(transform.position, Vector3.forward, -1);
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.tag == "Player")
         {
-            if (random == 1)
+            if (directionRotate == 1)
             {
-                collision.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(-0.000003f, 0, 0));
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(-0.00002f, 0, 0));
             }
 
-            if (random == 2)
+            if (directionRotate == 2)
             {
-                collision.gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0.000003f, 0, 0));
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(0.00002f, 0, 0));
+            }
+        }
+
+        if (other.tag == "Opponent")
+        {
+            if (directionRotate == 1)
+            {
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(-0.000001f, 0, 0));
+            }
+
+            if (directionRotate == 2)
+            {
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(0.000001f, 0, 0));
             }
         }
     }
