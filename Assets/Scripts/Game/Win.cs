@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Win : MonoBehaviour
 {
     [SerializeField] private GameObject paintController;
-    [SerializeField] private GameObject percentText;
+    [SerializeField] private GameObject percent;
     [SerializeField] private GameObject wall;
+    [SerializeField] private GameObject rank;
     [SerializeField] private GameObject boy;
     [SerializeField] private GameObject[] girls;
 
@@ -12,7 +15,8 @@ public class Win : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            percentText.SetActive(true);
+            percent.SetActive(true);
+            rank.SetActive(false);
             wall.SetActive(true);
             paintController.SetActive(true);
             boy.GetComponent<CharAnimatorController>().enabled = true;
