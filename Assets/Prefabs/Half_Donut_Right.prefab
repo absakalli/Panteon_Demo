@@ -120,7 +120,6 @@ GameObject:
   - component: {fileID: 1728887049580982992}
   - component: {fileID: 6861602630617604457}
   - component: {fileID: 4634465503954415540}
-  - component: {fileID: 2469632420507461035}
   m_Layer: 0
   m_Name: Half_Donut_Stick
   m_TagString: Obstacle
@@ -203,34 +202,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7388368752596093529, guid: cbdca2e602226454a91525d85f73dc21, type: 3}
---- !u!114 &2469632420507461035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2878379166402872916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bee0a6fa1f5d4f4db481219040523c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  graphMask:
-    value: -1
-  type: 0
-  mesh: {fileID: -7388368752596093529, guid: cbdca2e602226454a91525d85f73dc21, type: 3}
-  rectangleSize: {x: 3.3, y: 0.5}
-  circleRadius: 1
-  circleResolution: 6
-  height: 3
-  meshScale: 1
-  center: {x: 1.72, y: 0, z: 0}
-  updateDistance: 0.4
-  isDual: 0
-  cutsAddedGeom: 1
-  updateRotationDistance: 10
-  useRotationAndScale: 0
 --- !u!1 &3890486253631644298
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +214,6 @@ GameObject:
   - component: {fileID: 7163893121301458957}
   - component: {fileID: 5416602401762433495}
   - component: {fileID: 3300729618321972464}
-  - component: {fileID: 7904912954442231693}
   m_Layer: 0
   m_Name: Half_Donut_01
   m_TagString: Obstacle
@@ -326,34 +296,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5805732586665943179, guid: cbdca2e602226454a91525d85f73dc21, type: 3}
---- !u!114 &7904912954442231693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3890486253631644298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bee0a6fa1f5d4f4db481219040523c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  graphMask:
-    value: -1
-  type: 0
-  mesh: {fileID: -5805732586665943179, guid: cbdca2e602226454a91525d85f73dc21, type: 3}
-  rectangleSize: {x: 2, y: 3}
-  circleRadius: 1.37
-  circleResolution: 16
-  height: 3
-  meshScale: 1
-  center: {x: -0.8, y: 0, z: 0}
-  updateDistance: 1
-  isDual: 0
-  cutsAddedGeom: 1
-  updateRotationDistance: 10
-  useRotationAndScale: 0
 --- !u!1 &5179345401115010998
 GameObject:
   m_ObjectHideFlags: 0

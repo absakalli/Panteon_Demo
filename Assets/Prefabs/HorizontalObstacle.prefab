@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6857907054209300419}
   - component: {fileID: 8703445322318906121}
   - component: {fileID: 8107441219332329224}
-  - component: {fileID: 7767974581578734276}
   m_Layer: 0
   m_Name: HorizontalObstacle
   m_TagString: Obstacle
@@ -95,34 +94,6 @@ CapsuleCollider:
   m_Height: 0.2566947
   m_Direction: 1
   m_Center: {x: 0.00039009255, y: 0.00080078444, z: 0.00063776574}
---- !u!114 &7767974581578734276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7190037591456293596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bee0a6fa1f5d4f4db481219040523c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  graphMask:
-    value: -1
-  type: 1
-  mesh: {fileID: -8836696378809578477, guid: e1e0f90f4ee4ffc44917c9982f987f71, type: 3}
-  rectangleSize: {x: 1, y: 1}
-  circleRadius: 0.67
-  circleResolution: 16
-  height: 4
-  meshScale: 15
-  center: {x: 0, y: 0, z: 0}
-  updateDistance: 0.4
-  isDual: 0
-  cutsAddedGeom: 1
-  updateRotationDistance: 10
-  useRotationAndScale: 0
 --- !u!1 &7363251956002194606
 GameObject:
   m_ObjectHideFlags: 0
