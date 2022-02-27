@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using DG.Tweening;
+using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Win : MonoBehaviour
 {
@@ -35,5 +35,16 @@ public class Win : MonoBehaviour
         {
             other.gameObject.SetActive(false);
         }
+    }
+
+    public void Restart()
+    {
+        DOTween.KillAll();
+        SceneManager.LoadScene(0);
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }
