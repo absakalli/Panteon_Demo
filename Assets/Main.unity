@@ -1563,15 +1563,45 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotatorStick
       objectReference: {fileID: 0}
+    - target: {fileID: 1098657635732008369, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2694452956320607696, guid: a61ebc0820c37e8428d6df97d9aa85fa,
         type: 3}
       propertyPath: start
       value: 
       objectReference: {fileID: 4543173135408924443}
+    - target: {fileID: 4274351173361327461, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: boy
+      value: 
+      objectReference: {fileID: 1850093048}
+    - target: {fileID: 4274351173361327461, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: stick
+      value: 
+      objectReference: {fileID: 1563772595}
+    - target: {fileID: 4274351173361327461, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: rotator
+      value: 
+      objectReference: {fileID: 1413887086}
     - target: {fileID: 5313130990229425321, guid: a61ebc0820c37e8428d6df97d9aa85fa,
         type: 3}
       propertyPath: m_Motor.force
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313130990229425321, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313130990229425321, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6698870346201713950, guid: a61ebc0820c37e8428d6df97d9aa85fa,
         type: 3}
@@ -1647,11 +1677,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: RotatorStick (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1098657635732008369, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2694452956320607696, guid: a61ebc0820c37e8428d6df97d9aa85fa,
         type: 3}
       propertyPath: start
       value: 
       objectReference: {fileID: 4543173135408924443}
+    - target: {fileID: 4274351173361327461, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: boy
+      value: 
+      objectReference: {fileID: 1850093048}
+    - target: {fileID: 4274351173361327461, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+        type: 3}
+      propertyPath: stick
+      value: 
+      objectReference: {fileID: 1765502891}
     - target: {fileID: 5313130990229425321, guid: a61ebc0820c37e8428d6df97d9aa85fa,
         type: 3}
       propertyPath: m_Motor.force
@@ -2501,6 +2546,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4828479771141665712, guid: f4782363a0bbef9428cd868b29cc2169,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 4828479771141665713, guid: f4782363a0bbef9428cd868b29cc2169,
         type: 3}
       propertyPath: m_RootOrder
@@ -2824,6 +2874,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Half_Donut_Left (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603468766488938783, guid: 2b0f7f8a865ed884295a6fd1c34da0d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2386159094653815501, guid: 2b0f7f8a865ed884295a6fd1c34da0d9,
         type: 3}
@@ -4189,6 +4244,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399499545}
   m_CullTransparentMesh: 0
+--- !u!4 &1413887086 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5090839619017002613, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 401813614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491107183
 GameObject:
   m_ObjectHideFlags: 0
@@ -4543,6 +4604,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1561564740}
   m_CullTransparentMesh: 0
+--- !u!4 &1563772595 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4825563917357864464, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 401813614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1579214924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4712,6 +4779,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 961317901809794760, guid: 051192ffec5e9ba45a3b3e4846064e24,
     type: 3}
   m_PrefabInstance: {fileID: 1377468952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1765502891 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4825563917357864464, guid: a61ebc0820c37e8428d6df97d9aa85fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 413968049}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768763355 stripped
 GameObject:
