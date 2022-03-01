@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4554102592834246873}
   - component: {fileID: 7598423795277481027}
   - component: {fileID: -3186425836183120362}
-  m_Layer: 0
+  - component: {fileID: 7281129864750163801}
+  m_Layer: 8
   m_Name: StaticObstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -62,6 +63,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   start: {fileID: 0}
+--- !u!114 &7281129864750163801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2672644951170923576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f619fa758abf048bc109d015144b16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2927392137579723435
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +87,8 @@ GameObject:
   - component: {fileID: 1460332424126443444}
   - component: {fileID: 3720206198219889534}
   - component: {fileID: 4936452721207840393}
-  m_Layer: 0
+  - component: {fileID: 2241782526427192938}
+  m_Layer: 8
   m_Name: StaticObstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -155,3 +169,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12875415, y: 0.089122504, z: 0.041758485}
   m_Center: {x: 0, y: -0.0000000018626451, z: 0}
+--- !u!208 &2241782526427192938
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2927392137579723435}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.064, y: 0.045, z: 0.021000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5

@@ -89,10 +89,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0034773343
+  m_Radius: 0.0033374308
   m_Height: 0.02320179
   m_Direction: 1
-  m_Center: {x: 0.000026069087, y: 0.0018752709, z: 0.0000810744}
+  m_Center: {x: -0.000019385749, y: 0.0018752709, z: 0.00026183907}
 --- !u!1 &1288131173191266056
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,6 +575,8 @@ GameObject:
   - component: {fileID: 961317901809794760}
   - component: {fileID: 5669601267569392844}
   - component: {fileID: 2868125173107093823}
+  - component: {fileID: 3086469117560625785}
+  - component: {fileID: 8559239812030968202}
   m_Layer: 0
   m_Name: Girl
   m_TagString: Opponent
@@ -627,6 +629,40 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!195 &3086469117560625785
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031211668682037569}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.25
+  m_Speed: 4
+  m_Acceleration: Infinity
+  avoidancePriority: 1
+  m_AngularSpeed: 0
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 0
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &8559239812030968202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031211668682037569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b212fa510c5e345aeafba90cd63c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7039122923073895466
 GameObject:
   m_ObjectHideFlags: 0

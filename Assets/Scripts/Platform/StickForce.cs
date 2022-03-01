@@ -1,43 +1,50 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class StickForce : MonoBehaviour
 {
-    [SerializeField] private Transform stick;
-    [SerializeField] private GameObject boy;
-
+    RandomizeRotator randomizeRotator;
     private Vector3 forceDirect;
+    private GameObject target;
+    private GameObject boy;
+
+
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Target");
+        boy = GameObject.FindGameObjectWithTag("Player");
+        randomizeRotator = GameObject.FindObjectOfType<RandomizeRotator>();
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Vector3 stickDirect = new Vector3(stick.localPosition.x, 0, stick.localPosition.z);
+        Vector3 stickDirect = new Vector3(gameObject.transform.localPosition.x, 0, gameObject.transform.localPosition.z);
         float angle = Vector3.Angle(stickDirect, Vector3.forward);
-        var hinge = GetComponent<HingeJoint>();
-        var motor = hinge.motor;
 
         if (angle > 90)
         {
             angle = 180 - angle;
         }
 
-        if (motor.targetVelocity < 0)
+        if (randomizeRotator.direction == 1)
         {
-            if (stick.localPosition.x >= 0 && stick.localPosition.z >= 0)
+            if (gameObject.transform.localPosition.x >= 0 && gameObject.transform.localPosition.z >= 0)
             {
                 forceDirect = new Vector3(1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, -1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
 
-            else if (stick.localPosition.x < 0 && stick.localPosition.z >= 0)
+            else if (gameObject.transform.localPosition.x < 0 && gameObject.transform.localPosition.z >= 0)
             {
                 forceDirect = new Vector3(1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, 1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
 
-            else if (stick.localPosition.x >= 0 && stick.localPosition.z < 0)
+            else if (gameObject.transform.localPosition.x >= 0 && gameObject.transform.localPosition.z < 0)
             {
                 forceDirect = new Vector3(-1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, -1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
 
-            else if (stick.localPosition.x < 0 && stick.localPosition.z < 0)
+            else if (gameObject.transform.localPosition.x < 0 && gameObject.transform.localPosition.z < 0)
             {
                 forceDirect = new Vector3(-1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, 1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
@@ -45,22 +52,22 @@ public class StickForce : MonoBehaviour
 
         else
         {
-            if (stick.localPosition.x >= 0 && stick.localPosition.z >= 0)
+            if (gameObject.transform.localPosition.x >= 0 && gameObject.transform.localPosition.z >= 0)
             {
                 forceDirect = new Vector3(-1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, 1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
 
-            else if (stick.localPosition.x < 0 && stick.localPosition.z >= 0)
+            else if (gameObject.transform.localPosition.x < 0 && gameObject.transform.localPosition.z >= 0)
             {
                 forceDirect = new Vector3(-1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, -1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
 
-            else if (stick.localPosition.x >= 0 && stick.localPosition.z < 0)
+            else if (gameObject.transform.localPosition.x >= 0 && gameObject.transform.localPosition.z < 0)
             {
                 forceDirect = new Vector3(1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, 1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
 
-            else if (stick.localPosition.x < 0 && stick.localPosition.z < 0)
+            else if (gameObject.transform.localPosition.x < 0 && gameObject.transform.localPosition.z < 0)
             {
                 forceDirect = new Vector3(1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, -1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
@@ -69,9 +76,14 @@ public class StickForce : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             boy.GetComponent<CharController>().enabled = false;
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.0001f);
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(randomizeRotator.velocity));
             StartCoroutine("WaitAndPrint");
-        }        
+        }
+
+        if (collision.gameObject.tag == "Opponent")
+        {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(randomizeRotator.velocity));
+        }
     }
 
     private IEnumerator WaitAndPrint()

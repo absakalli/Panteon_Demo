@@ -4,9 +4,9 @@ using UnityEngine;
 public class HomeManager : MonoBehaviour
 {
     [SerializeField] private GameObject boy;
-    [SerializeField] private GameObject[] girls;
     [SerializeField] private GameObject rank;
     [SerializeField] private GameObject start;
+    [SerializeField] private GameObject[] girls;
     [SerializeField] private GameObject pointer;
     [SerializeField] private GameObject holdandmove;
 
@@ -23,12 +23,11 @@ public class HomeManager : MonoBehaviour
     public void Cliked()
     {
         anim.Kill();
+        rank.GetComponent<CanvasGroup>().alpha = 1;
         holdandmove.SetActive(false);
         start.SetActive(false);
-        rank.SetActive(true);
         boy.GetComponent<CharController>().enabled = true;
         boy.transform.GetChild(0).GetComponent<Animator>().SetInteger("run", 1);
-
         foreach (GameObject girl in girls)
         {
             girl.SetActive(true);

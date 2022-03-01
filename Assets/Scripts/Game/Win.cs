@@ -1,50 +1,45 @@
-﻿using DG.Tweening;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class Win : MonoBehaviour
 {
-    [SerializeField] private GameObject paintController;
-    [SerializeField] private GameObject percent;
-    [SerializeField] private GameObject wall;
-    [SerializeField] private GameObject rank;
-    [SerializeField] private GameObject boy;
-    [SerializeField] private GameObject[] girls;
+    private GameObject paintController;
+    private GameObject[] girls;
+    private GameObject percent;
+    private GameObject finish;
+    private GameObject rank;
+    private GameObject boy;
 
-    private void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.tag == "Player")
+        paintController = GameObject.FindWithTag("Paint");
+        percent = GameObject.FindWithTag("PercentText");
+        finish = GameObject.FindWithTag("FinishLine");
+        rank = GameObject.FindWithTag("RankText");
+        boy = GameObject.FindWithTag("Player");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        girls = GameObject.FindGameObjectsWithTag("Opponent");
+
+        if (collision.gameObject.tag == "Player")
         {
-            percent.SetActive(true);
-            rank.SetActive(false);
-            wall.SetActive(true);
-            paintController.SetActive(true);
+            percent.GetComponent<CanvasGroup>().alpha = 1;
+            rank.GetComponent<CanvasGroup>().alpha = 0;
+            finish.transform.GetChild(2).gameObject.SetActive(true);
+            paintController.transform.GetChild(0).gameObject.SetActive(true);
             boy.GetComponent<CharAnimatorController>().enabled = true;
             boy.GetComponent<CharController>().enabled = false;
             foreach (GameObject girl in girls)
             {
-                if (girl.activeSelf == true)
-                {
-                    girl.SetActive(false);
-                }                
+                girl.transform.root.gameObject.SetActive(false);
             }
             gameObject.SetActive(false);
         }
 
-        if(other.tag == "Opponent")
+        if (collision.gameObject.tag == "Opponent")
         {
-            other.gameObject.SetActive(false);
+            collision.gameObject.SetActive(false);
         }
-    }
-
-    public void Restart()
-    {
-        DOTween.KillAll();
-        SceneManager.LoadScene(0);
-    }
-
-    public void Exit()
-    {
-        Application.Quit();
     }
 }

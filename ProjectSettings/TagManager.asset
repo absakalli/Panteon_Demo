@@ -10,9 +10,15 @@ TagManager:
   - ForceStick
   - Map
   - Wall
-  - Text
   - Paint
   - Target
+  - Water
+  - Start
+  - RankText
+  - Undefined
+  - PercentText
+  - Opponents
+  - FinishLine
   layers:
   - Default
   - TransparentFX
@@ -22,7 +28,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Obstacles
   - 
   - 
   - 

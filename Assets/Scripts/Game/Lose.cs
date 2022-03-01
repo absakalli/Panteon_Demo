@@ -4,7 +4,12 @@ using DG.Tweening;
 
 public class Lose : MonoBehaviour
 {
-    [SerializeField] private GameObject start;
+    private GameObject start;
+
+    private void Start()
+    {
+        start = GameObject.FindGameObjectWithTag("Start");
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -34,7 +39,7 @@ public class Lose : MonoBehaviour
         {
             int randomx = Random.Range(-4, 5);
             int randomz = Random.Range(-2, 2);
-            other.transform.root.transform.position = start.transform.position + new Vector3(randomx, 0, randomz);
+            other.transform.root.position = start.transform.position + new Vector3(randomx, 0, randomz);
         }
     }
 }

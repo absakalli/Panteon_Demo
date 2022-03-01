@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7136677011878002112}
   - component: {fileID: 5648828183669691692}
-  - component: {fileID: 2594745924097944272}
+  - component: {fileID: 6865486805399457794}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Finish
@@ -50,7 +50,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2594745924097944272
+--- !u!114 &6865486805399457794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,12 +62,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d216a288d6efc4fb4ac7ab59e13985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintController: {fileID: 0}
-  percent: {fileID: 0}
-  wall: {fileID: 0}
-  rank: {fileID: 0}
-  boy: {fileID: 0}
-  girls: []
 --- !u!1 &2969835021307993091
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5385127753923942805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 2}
   m_LocalScale: {x: 13, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 6450756823135326071}
@@ -218,7 +212,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5560191351586742761}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 13, y: 6, z: 0}
@@ -245,7 +239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5806428799140994107
 Transform:
   m_ObjectHideFlags: 0
@@ -424,8 +418,8 @@ MonoBehaviour:
   interval: 0
   async: 1
   downsampleSteps: 3
-  registeredPaintableTexture: {fileID: 5806428799140994087}
-  cooldown: -523.7436
+  registeredPaintableTexture: {fileID: 0}
+  cooldown: -533.63763
   currentReader:
     requested: 0
     buffer: {fileID: 0}
@@ -473,7 +467,7 @@ GameObject:
   - component: {fileID: 6450756823135326071}
   m_Layer: 0
   m_Name: FinishLine
-  m_TagString: Untagged
+  m_TagString: FinishLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -486,7 +480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6450756823135326068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 205.2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5385127753923942806}

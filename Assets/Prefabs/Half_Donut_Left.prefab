@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6599480686082270312}
   - component: {fileID: 588137189567826572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingStick
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 8343710722288097416}
   - component: {fileID: 6752254550430772741}
   - component: {fileID: 4429867207238773211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Half_Donut_Left
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -107,7 +107,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4dfdb012c7208428e2b095915818ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
 --- !u!1 &2878379166402872916
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +119,8 @@ GameObject:
   - component: {fileID: 1728887049580982992}
   - component: {fileID: 6861602630617604457}
   - component: {fileID: 4634465503954415540}
-  m_Layer: 0
+  - component: {fileID: 5586337903095744201}
+  m_Layer: 8
   m_Name: Half_Donut_Stick
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -202,6 +202,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7388368752596093529, guid: cbdca2e602226454a91525d85f73dc21, type: 3}
+--- !u!208 &5586337903095744201
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878379166402872916}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.17, y: 0.010000001, z: 0.010000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0.17, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &3890486253631644298
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +230,8 @@ GameObject:
   - component: {fileID: 7163893121301458957}
   - component: {fileID: 5416602401762433495}
   - component: {fileID: 3300729618321972464}
-  m_Layer: 0
+  - component: {fileID: 683652514821047632}
+  m_Layer: 8
   m_Name: Half_Donut_01
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -296,6 +313,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5805732586665943179, guid: cbdca2e602226454a91525d85f73dc21, type: 3}
+--- !u!208 &683652514821047632
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890486253631644298}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.06, y: 0.030000001, z: 0.15}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: -0.082, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &5179345401115010998
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5524627702439689484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Half_Donut
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -337,7 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1587711627693524770}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stationary
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -371,7 +404,7 @@ GameObject:
   - component: {fileID: 6263816820805683857}
   - component: {fileID: 4005668688473725410}
   - component: {fileID: 3806837552291730152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Half_Donut_Side
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -465,7 +498,7 @@ GameObject:
   - component: {fileID: 5053851341339598820}
   - component: {fileID: 2333873275897038571}
   - component: {fileID: 3889082417967207595}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Half_Donut_Sphere
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

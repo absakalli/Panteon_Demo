@@ -43,19 +43,6 @@ public class RotatePlatform : MonoBehaviour
                 other.GetComponent<Rigidbody>().AddForce(new Vector3(0.00002f, 0, 0));
             }
         }
-
-        if (other.tag == "Opponent")
-        {
-            if (directionRotate == 1)
-            {
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(-0.000001f, 0, 0));
-            }
-
-            if (directionRotate == 2)
-            {
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(0.000001f, 0, 0));
-            }
-        }
     }
 }
 

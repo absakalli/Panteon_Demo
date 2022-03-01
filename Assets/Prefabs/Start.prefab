@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5878926031241514459}
   m_Layer: 0
   m_Name: Start
-  m_TagString: Platform
+  m_TagString: Start
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 1193368058078505962}
   m_Layer: 0
   m_Name: Start
-  m_TagString: Platform
+  m_TagString: Start
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

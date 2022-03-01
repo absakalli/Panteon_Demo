@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6857907054209300419}
   - component: {fileID: 8703445322318906121}
   - component: {fileID: 8107441219332329224}
-  m_Layer: 0
+  - component: {fileID: 2576590814487638471}
+  m_Layer: 8
   m_Name: HorizontalObstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -94,6 +95,22 @@ CapsuleCollider:
   m_Height: 0.2566947
   m_Direction: 1
   m_Center: {x: 0.00039009255, y: 0.00080078444, z: 0.00063776574}
+--- !u!208 &2576590814487638471
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190037591456293596}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.047000002, y: 0.128, z: 0.047000002}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7363251956002194606
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +123,7 @@ GameObject:
   - component: {fileID: -2166346379624677590}
   - component: {fileID: 7105721602572784272}
   - component: {fileID: 2912433426305150173}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HorizontalObstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
