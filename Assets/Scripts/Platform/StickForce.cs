@@ -1,18 +1,15 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class StickForce : MonoBehaviour
 {
     RandomizeRotator randomizeRotator;
     private Vector3 forceDirect;
-    private GameObject target;
     private GameObject boy;
 
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Target");
         boy = GameObject.FindGameObjectWithTag("Player");
         randomizeRotator = GameObject.FindObjectOfType<RandomizeRotator>();
     }
@@ -75,14 +72,14 @@ public class StickForce : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            boy.GetComponent<CharController>().enabled = false;
+            //boy.GetComponent<CharController>().enabled = false;
             collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(randomizeRotator.velocity));
-            StartCoroutine("WaitAndPrint");
+            //StartCoroutine("WaitAndPrint");
         }
 
         if (collision.gameObject.tag == "Opponent")
         {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(randomizeRotator.velocity));
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000003f * Mathf.Abs(randomizeRotator.velocity));
         }
     }
 

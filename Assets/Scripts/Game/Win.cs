@@ -39,7 +39,7 @@ public class Win : MonoBehaviour
 
         if (collision.gameObject.tag == "Opponent")
         {
-            collision.gameObject.SetActive(false);
+            collision.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
 }

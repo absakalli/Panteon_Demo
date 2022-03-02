@@ -1,13 +1,50 @@
 {
-    "m_SelectedDeviceId": "",
+    "m_SelectedDeviceId": "RF8NC10LYPK",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
         "processId": 0,
         "exited": false
     },
-    "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_SelectedPriority": 4,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "RF8NC10LYPK",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 32442,
+            "exited": true
+        },
+        {
+            "deviceId": "RF8NC10LYPK",
+            "name": "com.sec.android.app.launcher",
+            "processId": 1878,
+            "exited": false
+        },
+        {
+            "deviceId": "RF8NC10LYPK",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 9614,
+            "exited": true
+        },
+        {
+            "deviceId": "RF8NC10LYPK",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 11049,
+            "exited": true
+        },
+        {
+            "deviceId": "RF8NC10LYPK",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 11665,
+            "exited": true
+        },
+        {
+            "deviceId": "RF8NC10LYPK",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 14380,
+            "exited": true
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -28,10 +65,6 @@
             },
             {
                 "m_Name": "",
-                "m_Selected": false
-            },
-            {
-                "m_Name": "Unity",
                 "m_Selected": false
             },
             {
