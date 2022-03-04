@@ -7,10 +7,8 @@ public class CameraController : CinemachineExtension
 
     private void Start()
     {
-        if (Screen.height / Screen.width >= 2)
-        {
-            vcam.m_Lens.FieldOfView = 90;
-        }
+        float aspectRatio =  (float)Screen.height / Screen.width * 10;
+        vcam.m_Lens.FieldOfView = 70 + aspectRatio;
     }
 
     protected override void PostPipelineStageCallback(CinemachineVirtualCameraBase vcam, CinemachineCore.Stage stage, ref CameraState state, float deltaTime)

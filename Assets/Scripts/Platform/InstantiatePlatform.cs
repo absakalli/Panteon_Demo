@@ -69,12 +69,12 @@ public class InstantiatePlatform : MonoBehaviour
         while (true)
         {
             Instantiate(frame
-                , new Vector3(frame.transform.position.x, frame.transform.position.y, frameCount * 1.5f)
+                , new Vector3(frame.transform.position.x, frame.transform.position.y, frame.transform.position.z + frameCount * 1.5f)
                 , Quaternion.Euler(0, 90, 0)
                 , frames.GetComponent<Transform>());
 
             clone = Instantiate(frame
-                , new Vector3(-frame.transform.position.x, frame.transform.position.y, frameCount * 1.5f)
+                , new Vector3(-frame.transform.position.x, frame.transform.position.y, frame.transform.position.z + frameCount * 1.5f)
                 , Quaternion.Euler(0, -90, 0)
                 , frames.GetComponent<Transform>());
 
