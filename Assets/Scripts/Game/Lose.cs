@@ -23,6 +23,7 @@ public class Lose : MonoBehaviour
         {
             int randomx = Random.Range(-4, 5);
             int randomz = Random.Range(-2, 2);
+            collision.transform.root.GetComponent<Rigidbody>().velocity = Vector3.zero;
             collision.transform.root.position = start.transform.position + new Vector3(randomx, 0, randomz);
         }
     }
@@ -39,6 +40,7 @@ public class Lose : MonoBehaviour
         {
             int randomx = Random.Range(-4, 5);
             int randomz = Random.Range(-2, 2);
+            other.transform.root.GetComponent<Rigidbody>().velocity = Vector3.zero;
             other.transform.root.position = start.transform.position + new Vector3(randomx, 0, randomz);
         }
     }

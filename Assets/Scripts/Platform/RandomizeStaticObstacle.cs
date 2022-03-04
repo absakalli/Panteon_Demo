@@ -2,11 +2,11 @@
 
 public class RandomizeStaticObstacle : MonoBehaviour
 {
-    int random;
+    float random;
 
     void Start()
     {
-        random = Random.Range(-4, 5);
+        random = Random.Range(-3.5f, 3.51f);
         Randomize();
     }
 

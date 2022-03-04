@@ -7,7 +7,6 @@ public class StickForce : MonoBehaviour
     private Vector3 forceDirect;
     private GameObject boy;
 
-
     private void Start()
     {
         boy = GameObject.FindGameObjectWithTag("Player");
@@ -79,7 +78,7 @@ public class StickForce : MonoBehaviour
 
         if (collision.gameObject.tag == "Opponent")
         {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000003f * Mathf.Abs(randomizeRotator.velocity));
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(randomizeRotator.velocity));
         }
     }
 

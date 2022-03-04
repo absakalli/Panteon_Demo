@@ -4,9 +4,10 @@ using UnityEngine.AI;
 public class InstantiatePlatform : MonoBehaviour
 {
     [SerializeField] private GameObject[] platforms;
-    [SerializeField] private NavMeshSurface surface;
     [SerializeField] private GameObject[] blocks;
-    [SerializeField] private GameObject finish;
+    [SerializeField] private NavMeshSurface surface;
+    [SerializeField] private GameObject frames;
+    [SerializeField] private GameObject frame;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject map;
 
@@ -17,6 +18,7 @@ public class InstantiatePlatform : MonoBehaviour
     void Start()
     {
         InstantiateMap();
+        InstantiateFrame();
         surface.BuildNavMesh();
     }
 
@@ -34,14 +36,14 @@ public class InstantiatePlatform : MonoBehaviour
 
                 if (randomPlatform >= 0 && randomPlatform <= 2)
                 {
-                    clone = Instantiate(platforms[0]
-                        , new Vector3(platforms[0].transform.position.x, platforms[0].transform.position.y, 10.8f * i)
-                        , Quaternion.Euler(0, 90, 0)
-                        , map.GetComponent<Transform>());
+                    Instantiate(platforms[0]
+                       , new Vector3(platforms[0].transform.position.x, platforms[0].transform.position.y, 10.8f * i)
+                       , Quaternion.Euler(0, 90, 0)
+                       , map.GetComponent<Transform>());
 
                     int randomObstacle = Random.Range(0, 5);
 
-                    clone = Instantiate(blocks[randomObstacle]
+                    Instantiate(blocks[randomObstacle]
                        , new Vector3(blocks[randomObstacle].transform.position.x, blocks[randomObstacle].transform.position.y, 10.8f * i)
                        , Quaternion.identity
                        , map.GetComponent<Transform>());
@@ -51,20 +53,41 @@ public class InstantiatePlatform : MonoBehaviour
                 {
                     int randomRotatingPlatform = Random.Range(1, 4);
 
-                    clone = Instantiate(platforms[randomRotatingPlatform]
-                    , new Vector3(platforms[randomRotatingPlatform].transform.position.x, platforms[randomRotatingPlatform].transform.position.y, 10.8f * i)
-                    , Quaternion.identity
-                    , map.GetComponent<Transform>());
+                    Instantiate(platforms[randomRotatingPlatform]
+                       , new Vector3(platforms[randomRotatingPlatform].transform.position.x, platforms[randomRotatingPlatform].transform.position.y, 10.8f * i)
+                       , Quaternion.identity
+                       , map.GetComponent<Transform>());
                 }//Rotating Platform
             }
+        }
+    }
 
-            if (i == mapLenght)
+    private void InstantiateFrame()
+    {
+        GameObject clone;
+        int frameCount = 0;
+        while (true)
+        {
+            Instantiate(frame
+                , new Vector3(frame.transform.position.x, frame.transform.position.y, frameCount * 1.5f)
+                , Quaternion.Euler(0, 90, 0)
+                , frames.GetComponent<Transform>());
+
+            clone = Instantiate(frame
+                , new Vector3(-frame.transform.position.x, frame.transform.position.y, frameCount * 1.5f)
+                , Quaternion.Euler(0, -90, 0)
+                , frames.GetComponent<Transform>());
+
+            if (clone.transform.position.z < mapLenght * 10.8f)
             {
-                clone = Instantiate(finish
-                        , new Vector3(finish.transform.position.x, finish.transform.position.y, 10.8f * i)
-                        , Quaternion.identity
-                        , map.GetComponent<Transform>());
-            }//Finish Line            
+                frameCount++;
+                continue;
+            }
+
+            else
+            {
+                break;
+            }
         }
     }
 }
