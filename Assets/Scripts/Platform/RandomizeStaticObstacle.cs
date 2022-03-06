@@ -6,7 +6,7 @@ public class RandomizeStaticObstacle : MonoBehaviour
 
     void Start()
     {
-        random = Random.Range(-3, 4);
+        random = Random.Range(-2, 3);
         Randomize();
     }
 

@@ -1,5 +1,5 @@
 {
-    "m_SelectedDeviceId": "RF8NC10LYPK",
+    "m_SelectedDeviceId": "ce0718273042b80104",
     "m_SelectedPackage": {
         "deviceId": "",
         "name": "",
@@ -42,6 +42,42 @@
             "deviceId": "RF8NC10LYPK",
             "name": "com.DefaultCompany.Panteon_Demo",
             "processId": 14380,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0718273042b80104",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 27510,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0718273042b80104",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 28745,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0718273042b80104",
+            "name": "com.sec.android.app.launcher",
+            "processId": 5254,
+            "exited": false
+        },
+        {
+            "deviceId": "ce0718273042b80104",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 30053,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0718273042b80104",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 3122,
+            "exited": true
+        },
+        {
+            "deviceId": "ce0718273042b80104",
+            "name": "com.DefaultCompany.Panteon_Demo",
+            "processId": 6031,
             "exited": true
         }
     ],

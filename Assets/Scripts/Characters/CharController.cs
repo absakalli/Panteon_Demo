@@ -17,7 +17,7 @@ public class CharController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(0, 0, 1) * moveSpeed;
+        rb.MovePosition(transform.position + (Vector3.forward * moveSpeed * Time.deltaTime));
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -52,7 +52,7 @@ public class CharController : MonoBehaviour
                 anim.SetInteger("turn", 0);
             }
 
-            rb.velocity = new Vector3(movePos.x, 0, 1) * moveSpeed;
+            rb.MovePosition(transform.position + (new Vector3(movePos.x, 0, 1) * moveSpeed * Time.deltaTime));
         }
 
         else

@@ -35,12 +35,12 @@ public class RotatePlatform : MonoBehaviour
         {
             if (directionRotate == 1)
             {
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(-0.00002f, 0, 0));
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(-0.0000015f, 0, 0));
             }
 
             if (directionRotate == 2)
             {
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(0.00002f, 0, 0));
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(0.0000015f, 0, 0));
             }
         }
     }
