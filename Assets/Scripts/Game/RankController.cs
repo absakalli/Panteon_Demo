@@ -8,8 +8,7 @@ public class RankController : MonoBehaviour
     [SerializeField] private Transform boy;
     [SerializeField] private Text text;
     private GameObject target;
-
-    List<float> distance = new List<float>();
+    private List<float> distance = new List<float>();
     private int rank;
 
     void Update()

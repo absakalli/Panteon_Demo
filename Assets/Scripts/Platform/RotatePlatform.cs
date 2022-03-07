@@ -2,7 +2,7 @@
 
 public class RotatePlatform : MonoBehaviour
 {
-    int directionRotate;
+    private int directionRotate;
 
     private void Start()
     {
@@ -35,12 +35,25 @@ public class RotatePlatform : MonoBehaviour
         {
             if (directionRotate == 1)
             {
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(-0.0000015f, 0, 0));
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(-0.00000175f, 0, 0));
             }
 
             if (directionRotate == 2)
             {
-                other.GetComponent<Rigidbody>().AddForce(new Vector3(0.0000015f, 0, 0));
+                other.GetComponent<Rigidbody>().AddForce(new Vector3(0.00000175f, 0, 0));
+            }
+        }
+
+        if (other.tag == "Opponent")
+        {
+            if (directionRotate == 1)
+            {
+                other.transform.position += Vector3.left * 0.035f;
+            }
+
+            if (directionRotate == 2)
+            {
+                other.transform.position += Vector3.right * 0.035f;
             }
         }
     }

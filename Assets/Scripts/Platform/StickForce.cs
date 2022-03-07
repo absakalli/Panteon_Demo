@@ -2,12 +2,34 @@
 
 public class StickForce : MonoBehaviour
 {
-    RandomizeRotator randomizeRotator;
     private Vector3 forceDirect;
+    private int velocity;
+    private int direction;
+    private HingeJoint hinge;
+    private JointMotor hingemotor;
 
     private void Start()
     {
-        randomizeRotator = GameObject.FindObjectOfType<RandomizeRotator>();
+        velocity = Random.Range(100, 151);
+        direction = Random.Range(0, 2);
+        hinge = GetComponent<HingeJoint>();
+        hingemotor = hinge.motor;
+        SetVelocity();
+    }
+
+    private void SetVelocity()
+    {
+        if (direction == 0)
+        {
+            hingemotor.targetVelocity = velocity;
+            hinge.motor = hingemotor;
+        }
+
+        if (direction == 1)
+        {
+            hingemotor.targetVelocity = -velocity;
+            hinge.motor = hingemotor;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -20,7 +42,7 @@ public class StickForce : MonoBehaviour
             angle = 180 - angle;
         }
 
-        if (randomizeRotator.direction == 1)
+        if (direction == 0)
         {
             if (gameObject.transform.localPosition.x >= 0 && gameObject.transform.localPosition.z >= 0)
             {
@@ -43,7 +65,7 @@ public class StickForce : MonoBehaviour
             }
         }
 
-        else
+        if (direction == 1)
         {
             if (gameObject.transform.localPosition.x >= 0 && gameObject.transform.localPosition.z >= 0)
             {
@@ -68,12 +90,14 @@ public class StickForce : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(randomizeRotator.velocity));
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(velocity));
         }
 
         if (collision.gameObject.tag == "Opponent")
         {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(randomizeRotator.velocity));
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(velocity));
         }
     }
+
+
 }

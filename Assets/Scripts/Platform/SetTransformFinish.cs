@@ -2,7 +2,7 @@
 
 public class SetTransformFinish : MonoBehaviour
 {
-    InstantiatePlatform platform;
+    private InstantiatePlatform platform;
 
     void Start()
     {

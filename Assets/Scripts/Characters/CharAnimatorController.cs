@@ -2,8 +2,8 @@
 
 public class CharAnimatorController : MonoBehaviour
 {
-    Animator anim;
-    float animSpeed = 1;
+    private Animator anim;
+    private float animSpeed = 1;
 
     void Start()
     {

@@ -10,9 +10,7 @@ public class InstantiatePlatform : MonoBehaviour
     [SerializeField] private GameObject frame;
     [SerializeField] private GameObject start;
     [SerializeField] private GameObject map;
-
     public GameObject instStart;
-
     public int mapLenght;
 
     void Start()
@@ -66,6 +64,7 @@ public class InstantiatePlatform : MonoBehaviour
     {
         GameObject clone;
         int frameCount = 0;
+
         while (true)
         {
             Instantiate(frame
