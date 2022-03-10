@@ -5,7 +5,7 @@ public class CharAnimatorController : MonoBehaviour
     private Animator anim;
     private float animSpeed = 1;
 
-    void Start()
+    private void Start()
     {
         anim = transform.GetChild(0).GetComponent<Animator>();
     }

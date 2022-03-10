@@ -10,9 +10,9 @@ public class HomeManager : MonoBehaviour
     [SerializeField] private GameObject pointer;
     [SerializeField] private GameObject holdandmove;
 
-    Sequence anim;
+    private Sequence anim;
 
-    void Start()
+    private void Start()
     {
         anim = DOTween.Sequence();
         anim.Append(pointer.GetComponent<Transform>().DOLocalMoveX(-177, 1.5f))

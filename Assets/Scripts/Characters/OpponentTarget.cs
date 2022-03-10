@@ -6,7 +6,7 @@ public class OpponentTarget : MonoBehaviour
     private GameObject target;
     private NavMeshAgent agent;
 
-    void Start()
+    private void Start()
     {
         target = GameObject.FindGameObjectWithTag("Target");
         agent = GetComponent<NavMeshAgent>();

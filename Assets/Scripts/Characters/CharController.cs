@@ -8,7 +8,7 @@ public class CharController : MonoBehaviour
     private Vector3 firstPos, lastPos, movePos;
     public float moveSpeed;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
         child = transform.GetChild(0).gameObject;

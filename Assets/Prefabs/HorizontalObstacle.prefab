@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8703445322318906121}
   - component: {fileID: 8107441219332329224}
   - component: {fileID: 2576590814487638471}
-  - component: {fileID: 3792344528745180294}
   m_Layer: 8
   m_Name: HorizontalObstacle
   m_TagString: Obstacle
@@ -112,22 +111,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &3792344528745180294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7190037591456293596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 1
-  m_AffectedAgents: ffffffff
 --- !u!1 &7363251956002194606
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +121,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3346721256211194583}
   - component: {fileID: -2166346379624677590}
-  - component: {fileID: 7105721602572784272}
   - component: {fileID: 2912433426305150173}
   m_Layer: 8
   m_Name: HorizontalObstacle
@@ -178,18 +160,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7105721602572784272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7363251956002194606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc4dfdb012c7208428e2b095915818ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2912433426305150173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,3 +172,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf0f37110983a35429fced845b067712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pos: {x: 0, y: 0, z: 0}
+  rot: {x: 0, y: 0, z: 0, w: 0}

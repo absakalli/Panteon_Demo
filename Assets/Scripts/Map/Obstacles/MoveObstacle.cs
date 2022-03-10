@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using DG.Tweening;
 
-public class MoveObstacle : MonoBehaviour
+public class MoveObstacle : Obstacles
 {
-    Sequence anim;
+    private Obstacles moveObtacle = new Obstacles();
+    private Sequence anim;
     private int random;
 
-    void Start()
+    private void Start()
     {
         random = Random.Range(0, 2);
         ChangePos();
@@ -17,17 +18,18 @@ public class MoveObstacle : MonoBehaviour
     {
         if (random == 0)
         {
-            gameObject.transform.position = new Vector3(-5.5f, transform.position.y, transform.position.z);
+            moveObtacle.pos = new Vector3(-5.5f, transform.position.y, transform.position.z);
+            transform.position = moveObtacle.pos;
         }
     }
 
     private void MoveObst()
     {
         float random1 = Random.Range(0.9f, 1.6f);
+        anim = DOTween.Sequence();
 
         if (random == 0)
         {
-            anim = DOTween.Sequence();
             anim.Append(transform.DOMoveX(5.5f, random1))
                 .Append(transform.DOMoveX(-5.5f, random1))
                 .SetLoops(-1);
@@ -35,10 +37,14 @@ public class MoveObstacle : MonoBehaviour
 
         else
         {
-            anim = DOTween.Sequence();
             anim.Append(transform.DOMoveX(-5.5f, random1))
                 .Append(transform.DOMoveX(5.5f, random1))
                 .SetLoops(-1);
-        }        
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        moveObtacle.Lose(collision.gameObject.tag, collision.gameObject);
     }
 }

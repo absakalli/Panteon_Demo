@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class StickForce : MonoBehaviour
+public class RotatorStick : Obstacles
 {
     private Vector3 forceDirect;
     private int velocity;

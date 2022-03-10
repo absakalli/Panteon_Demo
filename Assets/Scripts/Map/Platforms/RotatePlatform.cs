@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class RotatePlatform : MonoBehaviour
+public class RotatePlatform : Platforms
 {
     private int directionRotate;
 

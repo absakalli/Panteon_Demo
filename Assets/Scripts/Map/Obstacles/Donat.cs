@@ -1,11 +1,12 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-public class MoveDonatStick : MonoBehaviour
+public class Donat : Obstacles
 {
-    Sequence anim;
+    private Obstacles donat = new Obstacles();
+    private Sequence anim;
 
-    void Start()
+    private void Start()
     {
         MoveDonatLeft();
     }
@@ -18,4 +19,10 @@ public class MoveDonatStick : MonoBehaviour
             .Append(transform.DOLocalMoveX(0.15f, random))
             .SetLoops(-1);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        donat.Lose(collision.gameObject.tag, collision.gameObject);
+    }
+
 }

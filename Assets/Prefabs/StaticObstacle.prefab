@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4554102592834246873}
   - component: {fileID: 7598423795277481027}
-  - component: {fileID: -3186425836183120362}
-  - component: {fileID: 7281129864750163801}
+  - component: {fileID: -1594970712750890394}
   m_Layer: 8
   m_Name: StaticObstacle
   m_TagString: Obstacle
@@ -50,7 +49,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-3186425836183120362
+--- !u!114 &-1594970712750890394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,22 +58,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2672644951170923576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc4dfdb012c7208428e2b095915818ac, type: 3}
+  m_Script: {fileID: 11500000, guid: 00a888bc3ad00e940bd7a41f7914bd89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
---- !u!114 &7281129864750163801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2672644951170923576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f619fa758abf048bc109d015144b16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
+  pos: {x: 0, y: 0, z: 0}
+  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2927392137579723435
 GameObject:
   m_ObjectHideFlags: 0
