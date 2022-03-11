@@ -2,9 +2,8 @@
 
 public class Map : MonoBehaviour
 {
-    public Vector3 pos;
-    public Quaternion rot;
-
+    public Vector3 pos { get; set; }
+    public Quaternion rot { get; set; }
     public void InstantiateMap(GameObject gameObjects, Quaternion rot, GameObject parent, float z)
     {
         Instantiate(gameObjects,

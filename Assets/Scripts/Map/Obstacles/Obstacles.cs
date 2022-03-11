@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Obstacles : Map
-{ 
+{
     public void Lose(string tag, GameObject gameObject)
     {
         if (tag == "Player")

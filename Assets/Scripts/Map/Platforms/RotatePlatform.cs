@@ -11,10 +11,10 @@ public class RotatePlatform : Platforms
 
     private void FixedUpdate()
     {
-        RotatePlat();
+        RotatePlatf();
     }
 
-    private void RotatePlat()
+    private void RotatePlatf()
     {
         GameObject rotateChild = transform.GetChild(0).gameObject;
 
@@ -48,12 +48,12 @@ public class RotatePlatform : Platforms
         {
             if (directionRotate == 1)
             {
-                other.transform.position += Vector3.left * 0.035f;
+                other.transform.position += Vector3.left * 0.033f;
             }
 
             if (directionRotate == 2)
             {
-                other.transform.position += Vector3.right * 0.035f;
+                other.transform.position += Vector3.right * 0.033f;
             }
         }
     }

@@ -1,5 +1,3 @@
 ﻿public class Platforms : Map
 {
-
-
 }

@@ -16,7 +16,6 @@ public class RotatorStick : Obstacles
         hingemotor = hinge.motor;
         SetVelocity();
     }
-
     private void SetVelocity()
     {
         if (direction == 0)
@@ -31,8 +30,19 @@ public class RotatorStick : Obstacles
             hinge.motor = hingemotor;
         }
     }
+    private void ApplyForce(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(velocity));
+        }
 
-    private void OnCollisionEnter(Collision collision)
+        if (collision.gameObject.tag == "Opponent")
+        {
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(velocity));
+        }
+    }
+    private void GetArea()
     {
         Vector3 stickDirect = new Vector3(gameObject.transform.localPosition.x, 0, gameObject.transform.localPosition.z);
         float angle = Vector3.Angle(stickDirect, Vector3.forward);
@@ -87,17 +97,11 @@ public class RotatorStick : Obstacles
                 forceDirect = new Vector3(1 * Mathf.Cos((angle * Mathf.PI) / 180), 0, -1 * Mathf.Sin((angle * Mathf.PI) / 180));
             }
         }
-
-        if (collision.gameObject.tag == "Player")
-        {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(velocity));
-        }
-
-        if (collision.gameObject.tag == "Opponent")
-        {
-            collision.gameObject.GetComponent<Rigidbody>().AddForce(forceDirect * 0.000001f * Mathf.Abs(velocity));
-        }
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        GetArea();
+        ApplyForce(collision);
+    }
 
 }
