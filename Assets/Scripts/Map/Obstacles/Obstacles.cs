@@ -17,7 +17,7 @@ public class Obstacles : Map
             int randomx = Random.Range(-4, 5);
             int randomz = Random.Range(-2, 2);
             gameObject.transform.root.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            gameObject.transform.root.position = new Vector3(randomx, 0, randomz); // duzenlenecek
+            gameObject.transform.root.position = new Vector3(randomx, 0, randomz);
         }
     }
 }
