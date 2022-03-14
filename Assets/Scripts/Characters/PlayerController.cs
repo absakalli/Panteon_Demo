@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 
-public class CharController : MonoBehaviour
+public class PlayerController : CharactersAnimator
 {
-    private GameObject child;
-    private Animator anim;
     private Rigidbody rb;
     private Vector3 firstPos, lastPos, movePos;
     public float moveSpeed;
@@ -11,11 +9,15 @@ public class CharController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        child = transform.GetChild(0).gameObject;
-        anim = child.GetComponent<Animator>();
+        anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
+    {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
     {
         rb.MovePosition(transform.position + (Vector3.forward * moveSpeed * Time.deltaTime));
 

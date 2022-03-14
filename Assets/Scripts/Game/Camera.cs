@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Cinemachine;
 
-public class CameraController : CinemachineExtension
+public class Camera : CinemachineExtension
 {
     [SerializeField] private CinemachineVirtualCamera vcam;
 

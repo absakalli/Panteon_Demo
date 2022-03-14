@@ -3,7 +3,6 @@ using DG.Tweening;
 
 public class MoveObstacle : Obstacles
 {
-    private Obstacles moveObtacle = new Obstacles();
     private Sequence anim;
     private int random;
 
@@ -18,8 +17,8 @@ public class MoveObstacle : Obstacles
     {
         if (random == 0)
         {
-            moveObtacle.pos = new Vector3(-5.5f, transform.position.y, transform.position.z);
-            transform.position = moveObtacle.pos;
+            pos = new Vector3(-5.5f, transform.position.y, transform.position.z);
+            transform.position = pos;
         }
     }
 
@@ -45,6 +44,6 @@ public class MoveObstacle : Obstacles
 
     private void OnCollisionEnter(Collision collision)
     {
-        moveObtacle.Lose(collision.gameObject.tag, collision.gameObject);
+        Lose(collision.gameObject.tag, collision.gameObject);
     }
 }

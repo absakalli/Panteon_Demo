@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class TextController : MonoBehaviour
+public class PercentText : Texts
 {
     [SerializeField] private Text percentageText;
     [SerializeField] private GameObject gameover;
 
     void Update()
     {
-        if (percentageText.text == "100%")
+        text = percentageText.text;
+
+        if (text == "100%")
         {
-            gameover.SetActive(true);
+            gameover.SetActive(true);            
         }
     }
 }

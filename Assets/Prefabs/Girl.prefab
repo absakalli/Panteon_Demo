@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1873093461314777857}
   m_Layer: 0
   m_Name: toe.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 9116926314930259771}
   m_Layer: 0
   m_Name: spine.003
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 5071546402753950820}
   m_Layer: 0
   m_Name: thigh.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 891049216618222503}
   m_Layer: 0
   m_Name: upper_arm.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 8013253367853590457}
   m_Layer: 0
   m_Name: thigh.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 3488922462709655813}
   m_Layer: 0
   m_Name: foot.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 4714118672696948497}
   m_Layer: 0
   m_Name: shin.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 5272793094935841138}
   m_Layer: 0
   m_Name: Girl
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 7210731965245097964}
   m_Layer: 0
   m_Name: hand.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 355334011961985543}
   m_Layer: 0
   m_Name: forearm.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 5626638751239094112}
   m_Layer: 0
   m_Name: spine.002
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 6735486001333920753}
   m_Layer: 0
   m_Name: pelvis
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 4472709314149663943}
   m_Layer: 0
   m_Name: shoulder.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 5200859591465409527}
   m_Layer: 0
   m_Name: toe.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -513,7 +513,7 @@ GameObject:
   - component: {fileID: 466814082700902373}
   m_Layer: 0
   m_Name: shin.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 1089674475341001280}
   m_Layer: 0
   m_Name: foot.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 8966184567994446788}
   - component: {fileID: 5669601267569392844}
   - component: {fileID: 3086469117560625785}
-  - component: {fileID: 8559239812030968202}
+  - component: {fileID: 4376983842848536223}
   m_Layer: 0
   m_Name: Girl
   m_TagString: Opponent
@@ -651,7 +651,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 1
---- !u!114 &8559239812030968202
+--- !u!114 &4376983842848536223
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -660,9 +660,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7031211668682037569}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65b212fa510c5e345aeafba90cd63c38, type: 3}
+  m_Script: {fileID: 11500000, guid: f9949f035a6880a4d8149a192530ba44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &7039122923073895466
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,7 +675,7 @@ GameObject:
   - component: {fileID: 5029601259072835690}
   m_Layer: 0
   m_Name: head
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -704,7 +705,7 @@ GameObject:
   - component: {fileID: 5458752283948488508}
   m_Layer: 0
   m_Name: metarig
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -736,7 +737,7 @@ GameObject:
   - component: {fileID: 4476752970968132424}
   m_Layer: 0
   m_Name: girl_2
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -840,7 +841,7 @@ GameObject:
   - component: {fileID: 1934088498960785253}
   m_Layer: 0
   m_Name: shoulder.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -872,7 +873,7 @@ GameObject:
   - component: {fileID: 6295354161946691377}
   m_Layer: 0
   m_Name: girl_3
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -975,7 +976,7 @@ GameObject:
   - component: {fileID: 7247769207333856186}
   m_Layer: 0
   m_Name: neck
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1006,7 +1007,7 @@ GameObject:
   - component: {fileID: 3036615889329686411}
   m_Layer: 0
   m_Name: forearm.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1037,7 +1038,7 @@ GameObject:
   - component: {fileID: 5793668426567888421}
   m_Layer: 0
   m_Name: upper_arm.R
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,7 +1069,7 @@ GameObject:
   - component: {fileID: 3242836492151821864}
   m_Layer: 0
   m_Name: hand.L
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,7 +1099,7 @@ GameObject:
   - component: {fileID: 7602573810574403201}
   m_Layer: 0
   m_Name: spine.001
-  m_TagString: Opponent
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

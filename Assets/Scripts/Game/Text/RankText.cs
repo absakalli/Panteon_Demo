@@ -2,29 +2,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RankController : MonoBehaviour
+public class RankText : Texts
 {
-    [SerializeField] private Transform[] girls;
     [SerializeField] private Transform boy;
-    [SerializeField] private Text text;
-    private GameObject target;
+    [SerializeField] private Text rText;
+    [SerializeField] private GameObject target;
     private List<float> distance = new List<float>();
     private int rank;
 
     void Update()
     {
-        target = GameObject.FindGameObjectWithTag("Target");
         SortRank();
-        text.text = rank.ToString() + "/" + (girls.Length + 1);
+        text = rank.ToString() + "/" + (girls.Length + 1);
+        rText.text = text;
     }
 
     private void SortRank()
     {
         float boyDistance = target.transform.position.z - boy.position.z;
         distance.Add(boyDistance);
-        foreach (Transform girl in girls)
+        foreach (GameObject girl in girls)
         {
-            float girlDistance = target.transform.position.z - girl.position.z;
+            float girlDistance = target.transform.position.z - girl.transform.position.z;
             distance.Add(girlDistance);
         }
         distance.Sort();

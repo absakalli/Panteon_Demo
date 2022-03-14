@@ -1,14 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-public class OpponentTarget : MonoBehaviour
+public class Opponent : Characters
 {
-    private GameObject target;
+    [SerializeField] private GameObject target;
     private NavMeshAgent agent;
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Target");
+        SetTarget();
+    }
+
+    private void SetTarget()
+    {
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(target.transform.position);
     }

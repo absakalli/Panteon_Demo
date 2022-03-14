@@ -1,21 +1,19 @@
 ﻿using UnityEngine;
 
-public class CharAnimatorController : MonoBehaviour
+public class PlayerAnimator : CharactersAnimator
 {
-    private Animator anim;
-    private float animSpeed = 1;
-
     private void Start()
     {
-        anim = transform.GetChild(0).GetComponent<Animator>();
+        animSpeed = 1;
+        anim = transform.GetChild(0).gameObject.GetComponent<Animator>();
     }
 
     private void FixedUpdate()
-    {        
+    {
         if (animSpeed > 0)
         {
             animSpeed -= 0.02f;
-            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, animSpeed+2);
+            GetComponent<Rigidbody>().velocity = new Vector3(0, 0, animSpeed + 2);
             animSpeed = Mathf.Max(animSpeed, 0);
             anim.speed = animSpeed;
         }
@@ -26,6 +24,6 @@ public class CharAnimatorController : MonoBehaviour
             anim.speed = 1;
             anim.SetInteger("turn", 0);
             anim.SetInteger("run", 0);
-        }        
+        }
     }
 }

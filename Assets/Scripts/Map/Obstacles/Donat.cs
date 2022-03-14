@@ -3,15 +3,14 @@ using UnityEngine;
 
 public class Donat : Obstacles
 {
-    private Obstacles donat = new Obstacles();
     private Sequence anim;
 
     private void Start()
     {
-        MoveDonatLeft();
+        MoveDonat();
     }
 
-    private void MoveDonatLeft()
+    private void MoveDonat()
     {
         float random = Random.Range(0.6f, 1.1f);
         anim = DOTween.Sequence();
@@ -22,7 +21,7 @@ public class Donat : Obstacles
 
     private void OnCollisionEnter(Collision collision)
     {
-        donat.Lose(collision.gameObject.tag, collision.gameObject);
+        Lose(collision.gameObject.tag, collision.gameObject);
     }
 
 }
